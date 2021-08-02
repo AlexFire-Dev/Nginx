@@ -7,6 +7,8 @@ services:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 5d & wait $${!}; done;'"
+    networks:
+      - defaulf
     restart: unless-stopped
 
   nginx:
@@ -20,4 +22,10 @@ services:
     ports:
       - 80:80
       - 443:443
+    networks:
+      - defaulf
     restart: unless-stopped
+
+networks:
+  defaulf:
+    driver: bridge
