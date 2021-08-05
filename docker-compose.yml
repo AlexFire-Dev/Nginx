@@ -17,6 +17,7 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
+      - /home/alex/projects/Billing/static:/var/www/billing/static:ro
       - /home/alex/projects/AlexFireChat/static:/var/www/django/static:ro
       - /home/alex/projects/AlexFireChat/media:/var/www/django/media:ro
     ports:
