@@ -20,9 +20,11 @@ services:
       - /home/alex/projects/Billing/static:/var/www/billing/static:ro
       - /home/alex/projects/AlexFireChat/static:/var/www/django/static:ro
       - /home/alex/projects/AlexFireChat/media:/var/www/django/media:ro
+    env_file:
+      - ./conf.env
     ports:
-      - 80:80
-      - 443:443
+      - "80:80"
+      - "443:443"
     networks:
       - defaulf
     restart: unless-stopped
