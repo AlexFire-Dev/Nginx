@@ -18,6 +18,8 @@ services:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
       - /home/alex/projects/Billing/static:/var/www/billing/static:ro
+      - /home/alex/projects/OnlineChat/static:/var/www/onlinechat/static:ro
+      - /home/alex/projects/OnlineChat/media:/var/www/onlinechat/media:ro
       - /home/alex/projects/AlexFireChat/static:/var/www/django/static:ro
       - /home/alex/projects/AlexFireChat/media:/var/www/django/media:ro
     env_file:
