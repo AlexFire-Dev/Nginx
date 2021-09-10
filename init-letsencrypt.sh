@@ -1,6 +1,6 @@
 #!/bin/bash
 
-domains=(*.alexfire.club *.alexfire.shvarev.com)
+domains=(chat.alexfire.club onlinechat.alexfire.club notebook.alexfire.club adminer.alexfire.club git.alexfire.club oplata.alexfire.club chat.alexfire.shvarev.com onlinechat.alexfire.shvarev.com notebook.alexfire.shvarev.com adminer.alexfire.shvarev.com git.alexfire.shvarev.com oplata.alexfire.shvarev.com)
 rsa_key_size=4096
 data_path="./data/certbot"
 email="alex@shvarev.com" # Adding a valid address is strongly recommended
